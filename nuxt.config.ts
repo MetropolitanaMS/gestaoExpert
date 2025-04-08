@@ -8,5 +8,13 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxt/image", "@nuxt/icon"],
+  modules: ["@nuxt/image", "@nuxt/icon", "@nuxtjs/google-fonts"],
+  googleFonts: {
+    families: {
+      Nunito: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        ital: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      },
+    },
+  },
 });

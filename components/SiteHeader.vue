@@ -34,7 +34,7 @@ const navItems = [
         </NuxtLink>
         <div class="w-full flex justify-end items-center">
           <button
-            class="w-fit px-8 py-2.5 bg-primary text-white rounded-full hidden sm:block"
+            class="w-fit px-8 py-2.5 bg-primary text-white rounded-full hidden sm:block hover:cursor-pointer hover:bg-secondary/70 active:bg-secondary/90 transition duration-200 ease-in-out"
           >
             Demonstração
           </button>
