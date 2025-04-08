@@ -62,9 +62,9 @@ const footerLinks = [
     </div>
     <div class="w-full h-full flex justify-center items-center relative z-10">
       <div
-        class="text-gray-text pb-12 grid grid-cols-1 gap-12 px-3.5 max-w-[540px] md:grid-cols-2 md:max-w-[720px] md:mt-20 lg:grid-cols-4 lg:max-w-[960px] xl:max-w-[1400px]"
+        class="text-gray-text pb-12 flex flex-wrap gap-12 px-3.5 max-w-[540px] md:max-w-[720px] md:mt-20 lg:grid-cols-4 lg:max-w-[960px] xl:max-w-[1140px]"
       >
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8 flex-1/3">
           <NuxtLink to="/" class="flex justify-start">
             <NuxtImg
               src="/assets/logo-light.png"
@@ -96,7 +96,7 @@ const footerLinks = [
           </form>
         </div>
         <div
-          class="flex flex-col gap-8"
+          class="flex flex-col gap-8 flex-1/12"
           v-for="(section, index) in footerLinks"
           :key="index"
         >
@@ -120,7 +120,7 @@ const footerLinks = [
             </li>
           </ul>
         </div>
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8 flex-1/12">
           <h4 class="text-lg text-white font-bold capitalize">Contato</h4>
           <ul class="flex flex-col gap-5">
             <li class="w-full flex items-start gap-2">
