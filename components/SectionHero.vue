@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-secondary">
+  <section class="bg-secondary" id="hero">
     <div
       class="w-full relative flex justify-center items-center flex-col gap-12 pt-12 md:pt-32"
     >

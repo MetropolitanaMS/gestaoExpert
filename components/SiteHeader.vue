@@ -2,36 +2,59 @@
 const isPanelVisible = ref(false);
 
 const navItems = [
-  { href: "/aderencia", text: "ADERÊNCIA" },
-  { href: "/beneficios", text: "BENEFÍCIOS" },
-  { href: "/funcionalidades", text: "FUNCIONALIDADES" },
-  { href: "/faq", text: "FAQ" },
-  { href: "/contato", text: "CONTATO" },
+  { href: "https://aderencia.com.br", text: "ADERÊNCIA" },
+  { href: "#beneficios", text: "BENEFÍCIOS" },
+  { href: "#funcionalidades", text: "FUNCIONALIDADES" },
+  { href: "#faq", text: "FAQ" },
+  { href: "#contato", text: "CONTATO" },
 ];
 </script>
 
 <template>
   <header
     class="bg-white text-black shadow-md text-sm flex flex-col justify-center items-center h-fit w-full sticky top-0 z-50"
+    id="site-header"
   >
     <div
-      id="site-header"
       class="w-full bg-white flex justify-center items-center px-8 py-4 lg:px-9 lg:border-b lg:border-white z-40"
     >
-      <div class="w-full max-w-[1320px] grid grid-cols-3 items-center">
-        <Icon
-          name="mdi:menu"
-          size="24"
-          class="hover:cursor-pointer text-primary"
-          @click="isPanelVisible = true"
-        />
-        <NuxtLink to="/" class="flex justify-center">
-          <NuxtImg
-            src="/assets/logo.png"
-            alt="Logo 'GE - Gestão Expert'"
-            class="w-[90px] h-[40px]"
+      <div
+        class="w-full max-w-[1140px] grid grid-cols-3 items-center lg:flex lg:justify-between lg:gap-8"
+      >
+        <div class="lg:hidden">
+          <Icon
+            name="mdi:menu"
+            size="24"
+            class="hover:cursor-pointer text-primary"
+            @click="isPanelVisible = true"
           />
-        </NuxtLink>
+        </div>
+        <div class="w-full flex justify-center lg:justify-start">
+          <NuxtLink to="#hero">
+            <NuxtImg
+              src="/assets/logo.png"
+              alt="Logo 'GE - Gestão Expert'"
+              class="w-[90px] lg:w-[115px] h-[40px] lg:h-[50px]"
+            />
+          </NuxtLink>
+        </div>
+        <div class="hidden lg:block">
+          <ul class="flex gap-8 justify-center items-center lg:w-full">
+            <li
+              v-for="(item, index) in navItems"
+              :key="index"
+              class="text-[#333333]"
+            >
+              <div
+                class="hover:text-primary w-fit transition duration-200 ease-in-out"
+              >
+                <NuxtLink :to="item.href" class="font-bold py-2">{{
+                  item.text
+                }}</NuxtLink>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div class="w-full flex justify-end items-center">
           <button
             class="w-fit px-8 py-2.5 bg-primary text-white rounded-full hidden sm:block hover:cursor-pointer hover:bg-secondary/70 active:bg-secondary/90 transition duration-200 ease-in-out"
