@@ -3,8 +3,10 @@
 @theme {
   --color-primary: #555392;
   --color-secondary: #272354;
+  --color-gray: #f7f9ff;
   --color-gray-text: #adb5bd;
   --color-black-text: #333333;
+  --color-black-paragraph: #666666;
   --color-light-blue: #4ac4f3;
 }
 

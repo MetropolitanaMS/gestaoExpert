@@ -9,7 +9,7 @@
           <div class="h-0.5 w-1/6 bg-primary rounded-full"></div>
           <div class="h-0.5 w-full bg-primary rounded-full"></div>
         </div>
-        <p class="text-[#666] text-center leading-7 lg:px-5">
+        <p class="text-black-paragraph text-center leading-7 lg:px-5">
           Conheça os benefícios de se ter um software integrado para uma Gestão
           Pública Inteligente e Eficiente.
         </p>

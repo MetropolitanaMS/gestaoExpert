@@ -23,7 +23,7 @@ const cteList = [
       >
         <div class="px-3.5 max-w-[90%]">
           <NuxtImg
-            src="/assets/dashboard/5.png"
+            src="/assets/illustration/5.png"
             alt="Ilustração de 3 pessoas construido uma aplicação de um celular com objetos ilustrados."
             class="w-full align-middle"
           />
@@ -34,7 +34,7 @@ const cteList = [
           <h2 class="font-bold text-black-text text-3xl leading-1.2">
             Resultados que transformam a gestão pública
           </h2>
-          <p class="text-[#666666]">
+          <p class="text-black-paragraph">
             A Gestão Expert simplifica a administração do seu órgão, desde o
             planejamento estratégico até o monitoramento de resultados.
           </p>

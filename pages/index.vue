@@ -3,5 +3,7 @@
     <SectionHero />
     <SectionBenefits />
     <SectionResults />
+    <SectionFeatures />
+    <SectionFAQ />
   </div>
 </template>

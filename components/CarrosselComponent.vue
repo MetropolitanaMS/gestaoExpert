@@ -23,7 +23,7 @@
           />
         </div>
         <h2 class="my-2 text-xl font-bold text-[#333]">{{ slide.title }}</h2>
-        <p class="text-base text-[#666]">{{ slide.text }}</p>
+        <p class="text-base text-black-paragraph">{{ slide.text }}</p>
       </div>
     </div>
     <div class="flex justify-center mt-20">
@@ -60,7 +60,7 @@
           />
         </div>
         <h2 class="my-2 text-xl font-bold text-[#333]">{{ slide.title }}</h2>
-        <p class="text-base text-[#666]">{{ slide.text }}</p>
+        <p class="text-base text-black-paragraph">{{ slide.text }}</p>
       </div>
     </div>
   </div>
