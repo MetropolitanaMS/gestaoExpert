@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from "vue";
+
 const questionsList = [
   {
     question: "Como a Gestão Expert pode beneficiar meu órgão público?",
@@ -17,6 +19,12 @@ const questionsList = [
       "O processo de compra é simples e rápido. Você pode entrar em contato conosco através do nosso site ou telefone, e nossa equipe irá guiá-lo em cada etapa.",
   },
 ];
+
+const activeIndex = ref(null);
+
+function toggleAccordion(index) {
+  activeIndex.value = activeIndex.value === index ? null : index;
+}
 </script>
 
 <template>
@@ -41,15 +49,28 @@ const questionsList = [
             v-for="(question, index) in questionsList"
             :key="index"
           >
-            <div class="card-header flex justify-between items-start">
+            <div
+              class="card-header flex justify-between items-start"
+              @click="toggleAccordion(index)"
+            >
               <h4 class="text-lg font-semibold">
                 {{ question.question }}
               </h4>
               <Icon
                 name="material-symbols:keyboard-arrow-down-rounded"
                 size="24"
-                class="hover:cursor-pointer text-gray-text rotate-[270deg] py-3 px-3 sm:px-4 md:px-5 lg:px-6 xl:px-7 2xl:px-8"
+                :class="{
+                  '-rotate-90': activeIndex !== index,
+                  'rotate-0': activeIndex === index,
+                }"
+                class="hover:cursor-pointer text-gray-text transition-transform py-3 px-3 sm:px-4 md:px-5 lg:px-6 xl:px-7 2xl:px-8"
               />
+            </div>
+            <div
+              v-if="activeIndex === index"
+              class="card-body mt-2 text-gray-600"
+            >
+              {{ question.answer }}
             </div>
           </li>
         </ul>
