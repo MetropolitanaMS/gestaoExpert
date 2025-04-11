@@ -4,9 +4,9 @@ const isPanelVisible = ref(false);
 const navItems = [
   { href: "https://aderencia.com.br", text: "ADERÊNCIA" },
   { href: "#benefits", text: "BENEFÍCIOS" },
-  { href: "#funcionalidades", text: "FUNCIONALIDADES" },
+  { href: "#features", text: "FUNCIONALIDADES" },
   { href: "#faq", text: "FAQ" },
-  { href: "#contato", text: "CONTATO" },
+  { href: "#contact", text: "CONTATO" },
 ];
 </script>
 
@@ -43,7 +43,7 @@ const navItems = [
             <li
               v-for="(item, index) in navItems"
               :key="index"
-              class="text-[#333333]"
+              class="text-black-text"
             >
               <div
                 class="hover:text-primary w-fit transition duration-200 ease-in-out"
