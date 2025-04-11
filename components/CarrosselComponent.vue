@@ -1,5 +1,8 @@
 <template>
-  <div class="relative overflow-hidden w-full max-w-[600px] mx-auto">
+  <div
+    v-if="screenWidth < 1024"
+    class="relative overflow-hidden w-full max-w-[600px] mx-auto lg:hidden"
+  >
     <div
       class="flex transition-transform duration-300 ease-in-out"
       :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
@@ -12,7 +15,7 @@
         :key="index"
         class="min-w-full text-center flex flex-col justify-center items-center gap-3"
       >
-        <div class="relative background">
+        <div class="relative">
           <NuxtImg
             :src="slide.image"
             :alt="slide.alt"
@@ -35,6 +38,30 @@
           class="w-2 h-2 bg-light-blue rounded-full"
         ></span>
       </span>
+    </div>
+  </div>
+  <div
+    v-if="screenWidth >= 1024"
+    class="w-full flex justify-center items-center"
+  >
+    <div
+      class="max-w-[960px] min-[1200px]:max-w-[1400px] flex justify-center items-start gap-8 px-12"
+    >
+      <div
+        v-for="(slide, index) in slides"
+        :key="index"
+        class="w-fit text-start flex flex-col justify-center items-start gap-3"
+      >
+        <div class="w-fit relative">
+          <NuxtImg
+            :src="slide.image"
+            :alt="slide.alt"
+            class="w-[60px] h-[60px] text-primary"
+          />
+        </div>
+        <h2 class="my-2 text-xl font-bold text-[#333]">{{ slide.title }}</h2>
+        <p class="text-base text-[#666]">{{ slide.text }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -73,6 +100,7 @@ export default {
       currentIndex: 0,
       startX: 0,
       endX: 0,
+      screenWidth: window.innerWidth,
     };
   },
   methods: {
@@ -90,23 +118,16 @@ export default {
         this.currentIndex--;
       }
     },
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth;
+    },
+  },
+  mounted() {
+    this.updateScreenWidth();
+    window.addEventListener("resize", this.updateScreenWidth);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.updateScreenWidth);
   },
 };
 </script>
-
-<style scoped>
-.background::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 12px;
-  width: 125%;
-  height: 125%;
-  border-radius: 100%;
-  background-image: url("/assets/shape/dotted-bg.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
-  z-index: -1;
-}
-</style>

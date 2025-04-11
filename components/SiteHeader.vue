@@ -3,7 +3,7 @@ const isPanelVisible = ref(false);
 
 const navItems = [
   { href: "https://aderencia.com.br", text: "ADERÊNCIA" },
-  { href: "#beneficios", text: "BENEFÍCIOS" },
+  { href: "#benefits", text: "BENEFÍCIOS" },
   { href: "#funcionalidades", text: "FUNCIONALIDADES" },
   { href: "#faq", text: "FAQ" },
   { href: "#contato", text: "CONTATO" },
