@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-gray pt-20 relative">
+  <section class="w-full bg-gray pt-20 relative" id="features">
     <!-- <div class="absolute bg-gray left-0 bottom-0 w-full h-full">
       <NuxtImg src="/assets/shape/1.svg" alt="Forma abstrata." />
     </div> -->
@@ -15,5 +15,5 @@
         Módulos do Gestão Expert para uma Gestão Completa e Eficiênte.
       </p>
     </div>
-  </div>
+  </section>
 </template>

@@ -20,7 +20,7 @@ const questionsList = [
 </script>
 
 <template>
-  <div class="w-full flex justify-center items-center pt-10 pb-12">
+  <section class="w-full flex justify-center items-center pt-10 pb-12" id="faq">
     <div
       class="w-full max-w-[540px] sm:max-w-[720px] md:max-w-[960px] flex flex-col justify-center items-center lg:grid lg:grid-cols-2 gap-8 px-3.5 lg:px-0"
     >
@@ -55,5 +55,5 @@ const questionsList = [
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </template>

@@ -7,7 +7,7 @@ const cteList = [
 </script>
 
 <template>
-  <div class="relative">
+  <section class="relative">
     <div
       class="w-full absolute -left-[140px] lg:-left-[240px] -top-[70px] opacity-5"
     >
@@ -55,5 +55,5 @@ const cteList = [
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
