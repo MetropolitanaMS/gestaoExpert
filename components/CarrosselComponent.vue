@@ -12,25 +12,27 @@
         :key="index"
         class="min-w-full text-center flex flex-col justify-center items-center gap-3"
       >
-        <NuxtImg
-          :src="slide.image"
-          :alt="slide.alt"
-          class="w-16 h-16 text-primary"
-        />
+        <div class="relative background">
+          <NuxtImg
+            :src="slide.image"
+            :alt="slide.alt"
+            class="w-[60px] h-[60px] text-primary"
+          />
+        </div>
         <h2 class="my-2 text-xl font-bold text-[#333]">{{ slide.title }}</h2>
         <p class="text-base text-[#666]">{{ slide.text }}</p>
       </div>
     </div>
-    <div class="flex justify-center mt-2">
+    <div class="flex justify-center mt-20">
       <span
         v-for="(slide, index) in slides"
         :key="index"
-        class="w-5 h-5 mx-1 bg-white rounded-full cursor-pointer border-2 border-gray-300 flex justify-center items-center"
+        class="w-5 h-5 mx-1 bg-white rounded-full cursor-pointer border-2 border-[#e7e7e7] flex justify-center items-center"
         @click="currentIndex = index"
       >
         <span
           v-if="currentIndex === index"
-          class="w-2 h-2 bg-primary rounded-full"
+          class="w-2 h-2 bg-light-blue rounded-full"
         ></span>
       </span>
     </div>
@@ -93,55 +95,18 @@ export default {
 </script>
 
 <style scoped>
-.carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-}
-
-.carousel-container {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  text-align: center;
-}
-
-.slide-image {
-  width: 100%;
-  height: auto;
-}
-
-.slide-title {
-  margin: 10px 0;
-  font-size: 1.5em;
-}
-
-.slide-text {
-  font-size: 1em;
-  color: #555;
-}
-
-.carousel-selectors {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.selector {
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.selector.active {
-  background-color: #333;
+.background::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 12px;
+  width: 125%;
+  height: 125%;
+  border-radius: 100%;
+  background-image: url("/assets/shape/dotted-bg.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: -1;
 }
 </style>
