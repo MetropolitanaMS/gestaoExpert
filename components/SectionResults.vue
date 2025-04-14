@@ -8,13 +8,11 @@ const cteList = [
 
 <template>
   <section class="relative">
-    <div
-      class="w-full absolute -left-[140px] lg:-left-[240px] -top-[70px] opacity-5"
-    >
+    <div class="w-full absolute -left-[120px] -top-[70px] opacity-5">
       <NuxtImg
         src="/assets/shape/7.png"
         alt="Forma abstrata."
-        class="w-full align-middle"
+        class="overflow-clip"
       />
     </div>
     <div class="w-full mb-40 flex justify-center items-center">
