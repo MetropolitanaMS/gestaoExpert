@@ -6,5 +6,6 @@
     <SectionFeatures />
     <SectionFAQ />
     <SectionClients />
+    <SectionContact />
   </div>
 </template>
