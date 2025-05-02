@@ -5,5 +5,6 @@
     <SectionResults />
     <SectionFeatures />
     <SectionFAQ />
+    <SectionClients />
   </div>
 </template>
