@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex w-full bg-secondary bg-[url('/assets/shape/10.png')] bg-no-repeat py-37"
+    class="flex w-full overflow-hidden bg-secondary bg-[url('/assets/shape/10.png')] bg-no-repeat py-37"
   >
     <div
       class="flex flex-col lg:flex-row items-center justify-center px-4 lg:px-20 mx-4 lg:mx-20 w-full"
@@ -20,7 +20,7 @@
       </div>
 
       <div
-        class="flex items-center m-10 w-full md:w-3/5 overflow-hidden relative"
+        class="flex items-center justify-center m-10 w-full md:w-3/5 overflow-hidden relative"
       >
         <div class="whitespace-nowrap animate-scroll flex">
           <div

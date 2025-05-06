@@ -60,10 +60,10 @@
           </div>
           <div class="flex flex-col lg:flex-row relative w-full mb-4">
             <div
-              class="flex w-full items-center border-b border-gray-300 mb-5 lg:mb-0 lg:mr-3.5"
+              class="group flex w-full items-center border-b border-gray-300 mb-5 lg:mb-0 lg:mr-3.5"
             >
               <svg
-                class="w-5 h-5 text-gray-400 mr-4"
+                class="w-5 h-5 text-gray-400 mr-4 transition-colors duration-300 group-focus-within:text-secondary"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
                 fill="currentColor"
@@ -80,10 +80,10 @@
               />
             </div>
             <div
-              class="flex w-full items-center border-b border-gray-300 lg:ml-3.5"
+              class="group flex w-full items-center border-b border-gray-300 lg:ml-3.5"
             >
               <svg
-                class="w-5 h-5 text-gray-400 mr-4"
+                class="w-5 h-5 text-gray-400 mr-4 transition-colors duration-300 group-focus-within:text-secondary"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
                 fill="currentColor"
@@ -99,9 +99,11 @@
               />
             </div>
           </div>
-          <div class="flex w-full items-center border-b border-gray-300 mb-4">
+          <div
+            class="group flex w-full items-center border-b border-gray-300 mb-4"
+          >
             <svg
-              class="w-5 h-5 text-gray-400 mr-4"
+              class="w-5 h-5 text-gray-400 mr-4 transition-colors duration-300 group-focus-within:text-secondary"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
               fill="currentColor"
