@@ -19,7 +19,7 @@
       text-anchor="middle"
       alignment-baseline="central"
       fill="var(--text-color)"
-      font-size="0.135"
+      font-size="0.2"
     >
       {{ label }}
     </text>

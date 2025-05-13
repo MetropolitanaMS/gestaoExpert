@@ -21,19 +21,19 @@
         @click="setSlide(index)"
         :key="index"
         :label="slide.label"
-        color="#555392"
-        hoverColor="#272354"
+        color="#272354"
+        hoverColor="#555392"
         :isSelected="index === currentIndex"
-        :selectedColor="'#272354'"
+        :selectedColor="'#555392'"
         class="rotate-90 w-[12vw] h-[13.8vw] min-[2000px]:w-[11vw] min-[2000px]:h-[12.8vw] min-[4000px]:w-[10vw] min-[4000px]:h-[11.8vw] absolute"
         :class="
           index === currentIndex ? 'focus:ring focus:ring-violet-300' : ''
         "
         :style="
-          positionsWithSix[index]
+          positionsWithFourteen[index]
             ? {
-                left: positionsWithSix[index].left,
-                top: positionsWithSix[index].top,
+                left: positionsWithFourteen[index].left,
+                top: positionsWithFourteen[index].top,
               }
             : {}
         "
@@ -167,6 +167,78 @@ export default {
           title: "Relatórios/BI",
           description:
             "Dashboards, Relatórios, Exportação de dados. Geração de relatórios e dashboards para acompanhamento do desempenho e Business Intelligence.",
+        },
+        {
+          id: 5,
+          image: "./assets/dashboard/6.png",
+          alt: "Demais módulos.",
+          label: "Demais módulos",
+          title: "Demais módulos",
+          description:
+            "Matriz de Swot, 5W2h, Agenda, Auditoria, Plano de compras anual, ODS. Funcionalidades adicionais, incluindo ferramentas de análise estratégica (Matriz SWOT, 5W2H), agenda, auditoria, planejamento de compras e acompanhamento dos Objetivos de Desenvolvimento Sustentável(ODS).",
+        },
+        {
+          id: 5,
+          image: "./assets/dashboard/6.png",
+          alt: "Demais módulos.",
+          label: "Demais módulos",
+          title: "Demais módulos",
+          description:
+            "Matriz de Swot, 5W2h, Agenda, Auditoria, Plano de compras anual, ODS. Funcionalidades adicionais, incluindo ferramentas de análise estratégica (Matriz SWOT, 5W2H), agenda, auditoria, planejamento de compras e acompanhamento dos Objetivos de Desenvolvimento Sustentável(ODS).",
+        },
+        {
+          id: 5,
+          image: "./assets/dashboard/6.png",
+          alt: "Demais módulos.",
+          label: "Demais módulos",
+          title: "Demais módulos",
+          description:
+            "Matriz de Swot, 5W2h, Agenda, Auditoria, Plano de compras anual, ODS. Funcionalidades adicionais, incluindo ferramentas de análise estratégica (Matriz SWOT, 5W2H), agenda, auditoria, planejamento de compras e acompanhamento dos Objetivos de Desenvolvimento Sustentável(ODS).",
+        },
+        {
+          id: 5,
+          image: "./assets/dashboard/6.png",
+          alt: "Demais módulos.",
+          label: "Demais módulos",
+          title: "Demais módulos",
+          description:
+            "Matriz de Swot, 5W2h, Agenda, Auditoria, Plano de compras anual, ODS. Funcionalidades adicionais, incluindo ferramentas de análise estratégica (Matriz SWOT, 5W2H), agenda, auditoria, planejamento de compras e acompanhamento dos Objetivos de Desenvolvimento Sustentável(ODS).",
+        },
+        {
+          id: 5,
+          image: "./assets/dashboard/6.png",
+          alt: "Demais módulos.",
+          label: "Demais módulos",
+          title: "Demais módulos",
+          description:
+            "Matriz de Swot, 5W2h, Agenda, Auditoria, Plano de compras anual, ODS. Funcionalidades adicionais, incluindo ferramentas de análise estratégica (Matriz SWOT, 5W2H), agenda, auditoria, planejamento de compras e acompanhamento dos Objetivos de Desenvolvimento Sustentável(ODS).",
+        },
+        {
+          id: 5,
+          image: "./assets/dashboard/6.png",
+          alt: "Demais módulos.",
+          label: "Demais módulos",
+          title: "Demais módulos",
+          description:
+            "Matriz de Swot, 5W2h, Agenda, Auditoria, Plano de compras anual, ODS. Funcionalidades adicionais, incluindo ferramentas de análise estratégica (Matriz SWOT, 5W2H), agenda, auditoria, planejamento de compras e acompanhamento dos Objetivos de Desenvolvimento Sustentável(ODS).",
+        },
+        {
+          id: 5,
+          image: "./assets/dashboard/6.png",
+          alt: "Demais módulos.",
+          label: "Demais módulos",
+          title: "Demais módulos",
+          description:
+            "Matriz de Swot, 5W2h, Agenda, Auditoria, Plano de compras anual, ODS. Funcionalidades adicionais, incluindo ferramentas de análise estratégica (Matriz SWOT, 5W2H), agenda, auditoria, planejamento de compras e acompanhamento dos Objetivos de Desenvolvimento Sustentável(ODS).",
+        },
+        {
+          id: 5,
+          image: "./assets/dashboard/6.png",
+          alt: "Demais módulos.",
+          label: "Demais módulos",
+          title: "Demais módulos",
+          description:
+            "Matriz de Swot, 5W2h, Agenda, Auditoria, Plano de compras anual, ODS. Funcionalidades adicionais, incluindo ferramentas de análise estratégica (Matriz SWOT, 5W2H), agenda, auditoria, planejamento de compras e acompanhamento dos Objetivos de Desenvolvimento Sustentável(ODS).",
         },
         {
           id: 5,
