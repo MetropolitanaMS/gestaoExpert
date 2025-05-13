@@ -1,6 +1,6 @@
 <template>
   <div id="contact" class="py-28 relative">
-    <div class="flex flex-wrap lg:flex-nowrap mx-4 xl:mx-28 px-3.5">
+    <div class="flex flex-wrap lg:flex-nowrap mx-4 xl:mx-28 2xl:mx-80 px-3.5">
       <div class="flex flex-col items-center px-3.5">
         <div
           class="flex flex-col w-full items-center rounded-md bg-secondary p-9 mr-5"
@@ -55,7 +55,7 @@
             <input
               type="text"
               placeholder="Nome"
-              class="w-full bg-transparent py-2 outline-none placeholder-gray-400"
+              class="w-full bg-transparent py-2 outline-none placeholder-gray-400 transition-colors duration-300 group-focus-within:placeholder-secondary"
             />
           </div>
           <div class="flex flex-col lg:flex-row relative w-full mb-4">
@@ -74,9 +74,9 @@
               </svg>
 
               <input
-                type="tel"
+                type="email"
                 placeholder="Email*"
-                class="w-full bg-transparent py-2 outline-none placeholder-gray-400"
+                class="w-full bg-transparent py-2 outline-none placeholder-gray-400 transition-colors duration-300 group-focus-within:placeholder-secondary"
               />
             </div>
             <div
@@ -95,7 +95,7 @@
               <input
                 type="tel"
                 placeholder="Telefone"
-                class="w-full bg-transparent py-2 outline-none placeholder-gray-400"
+                class="w-full bg-transparent py-2 outline-none placeholder-gray-400 transition-colors duration-300 group-focus-within:placeholder-secondary"
               />
             </div>
           </div>
@@ -116,7 +116,7 @@
             <input
               type="text"
               placeholder="Você representa qual instituição?*"
-              class="w-full bg-transparent py-2 outline-none placeholder-gray-400"
+              class="w-full bg-transparent py-2 outline-none placeholder-gray-400 transition-colors duration-300 group-focus-within:placeholder-secondary"
             />
           </div>
           <div class="flex mt-5">
