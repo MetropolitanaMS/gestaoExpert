@@ -13,6 +13,7 @@
     <polygon
       class="hex"
       points="1,0 0.5,0.866 -0.5,0.866 -1,0 -0.5,-0.866 0.5,-0.866"
+      @click="$emit('select', index)"
     />
     <text
       class="rotate-270"
@@ -21,7 +22,14 @@
       fill="var(--text-color)"
       font-size="0.2"
     >
-      {{ label }}
+      <tspan
+        v-for="(line, i) in labelLines"
+        :key="i"
+        x="0"
+        :dy="i === 0 ? '0' : '0.25'"
+      >
+        {{ line }}
+      </tspan>
     </text>
   </svg>
 </template>
@@ -52,6 +60,16 @@ export default {
     textColor: {
       type: String,
       default: "#fff",
+    },
+  },
+  computed: {
+    labelLines() {
+      const words = this.label.split(" ");
+      const lines = [];
+      for (let i = 0; i < words.length; i += 2) {
+        lines.push(words.slice(i, i + 2).join(" "));
+      }
+      return lines;
     },
   },
 };
