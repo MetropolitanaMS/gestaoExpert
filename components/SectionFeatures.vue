@@ -15,14 +15,38 @@
         Módulos do Gestão Expert para uma Gestão Completa e Eficiênte.
       </p>
     </div>
+    <div class="relative">
+      <HexMenuItem
+        v-for="(slide, index) in slides"
+        @click="setSlide(index)"
+        :key="index"
+        :label="slide.label"
+        color="#1e2a38"
+        hoverColor="#2c3150"
+        :isSelected="index === currentIndex"
+        :selectedColor="'#2c3150'"
+        class="rotate-90 w-[10vw] h-[11.8vw] min-[2000px]:w-[9vw] min-[2000px]:h-[10.8vw] min-[4000px]:w-[8vw] min-[4000px]:h-[9.8vw] absolute"
+        :class="
+          index === currentIndex ? 'focus:ring focus:ring-violet-300' : ''
+        "
+        :style="
+          positionsWithSix[index]
+            ? {
+                left: positionsWithSix[index].left,
+                top: positionsWithSix[index].top,
+              }
+            : {}
+        "
+      />
+    </div>
     <div
-      class="overflow-hidden relative w-full"
+      class="overflow-hidden relative w-full mt-[20%] lg:mt-[18%]"
       @touchstart="onTouchStart"
       @touchmove="onTouchMove"
       @touchend="onTouchEnd"
     >
       <div
-        class="flex transition-transform duration-300 ease-in-out"
+        class="flex transition-transform duration-700 ease-[cubic-bezier(0.6, 0, 0.2, 1)]"
         :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
       >
         <div
@@ -100,49 +124,180 @@ export default {
     return {
       slides: [
         {
+          id: 0,
           image: "./assets/dashboard/1.png",
           alt: "Mapa estratégico.",
+          label: "Mapa estratégico",
           title: "Mapa Estratégico",
           description:
             "Mapas, Objetivos, Indicadores. Esté módulo foca no planejamento estratégico, permitindo a visualização de objetivos e indicadores de desempenho",
         },
         {
+          id: 1,
           image: "./assets/dashboard/2.png",
           alt: "Ações, projetos e iniciativas.",
+          label: "Ações, Projetos e Iniciativas",
           title: "Ações, projetos e iniciativas",
           description:
             "Escopo, Cronograma, Financeiro, Riscos. Gerenciamento de projetos e ações, incluindo planejamento, orçamento e análise de riscos.",
         },
         {
+          id: 2,
           image: "./assets/dashboard/3.png",
           alt: "Processos.",
+          label: "Processos",
           title: "Processos",
           description:
             "Documentação de processos. Mapeamento e documentação dos processos internos.",
         },
         {
+          id: 3,
           image: "./assets/dashboard/4.png",
           alt: "Integrações.",
+          label: "Integrações",
           title: "Integrações",
           description:
             "Banco de dados, APIs, Arquivos de integração com outras plataformas e banco de dados, permitindo a centralização de informações.",
         },
         {
+          id: 4,
           image: "./assets/dashboard/5.png",
           alt: "Relatórios/BI.",
+          label: "Relatórios/BI",
           title: "Relatórios/BI",
           description:
             "Dashboards, Relatórios, Exportação de dados. Geração de relatórios e dashboards para acompanhamento do desempenho e Business Intelligence.",
         },
         {
+          id: 5,
           image: "./assets/dashboard/6.png",
           alt: "Demais módulos.",
+          label: "Demais módulos",
           title: "Demais módulos",
           description:
             "Matriz de Swot, 5W2h, Agenda, Auditoria, Plano de compras anual, ODS. Funcionalidades adicionais, incluindo ferramentas de análise estratégica (Matriz SWOT, 5W2H), agenda, auditoria, planejamento de compras e acompanhamento dos Objetivos de Desenvolvimento Sustentável(ODS).",
         },
       ],
       currentIndex: 0,
+      positionsWithTwo: [
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+      ],
+      positionsWithThree: [
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+      ],
+      positionsWithFour: [
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+      ],
+      positionsWithFive: [
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+      ],
+      positionsWithSix: [
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+      ],
+      positionsWithSeven: [
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+      ],
+      positionsWithEight: [
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
+      ],
+      positionsWithNine: [
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
+        { left: "63.5vw", top: "0vw" },
+      ],
+      positionsWithTen: [
+        { left: "19.5vw", top: "0vw" },
+        { left: "23.9vw", top: "7.6vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
+      ],
+      positionsWithEleven: [
+        { left: "19.5vw", top: "0vw" },
+        { left: "23.9vw", top: "7.6vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
+        { left: "63.5vw", top: "0vw" },
+      ],
+      positionsWithTwelve: [
+        { left: "19.5vw", top: "0vw" },
+        { left: "23.9vw", top: "7.6vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
+        { left: "63.5vw", top: "0vw" },
+        { left: "67.8vw", top: "7.6vw" },
+      ],
+      // firstLine: [
+      //   { left: "20vw", top: "0vw" },
+      //   { left: "32vw", top: "0vw" },
+      //   { left: "44vw", top: "0vw" },
+      //   { left: "56vw", top: "0vw" },
+      //   { left: "68vw", top: "0vw" },
+      // ],
+      // secondLine: [
+      //   { left: "26vw", top: "10.3vw" },
+      //   { left: "38vw", top: "10.3vw" },
+      //   { left: "50vw", top: "10.3vw" },
+      //   { left: "62vw", top: "10.3vw" },
+      // ],
+      // thirdLine: [
+      //   { left: "20vw", top: "20.3vw" },
+      //   { left: "32vw", top: "20.3vw" },
+      //   { left: "44vw", top: "20.3vw" },
+      //   { left: "56vw", top: "20.3vw" },
+      //   { left: "68vw", top: "20.3vw" },
+      // ],
       startX: 0,
       endX: 0,
       screenWidth: window.innerWidth,
@@ -159,6 +314,10 @@ export default {
         this.currentIndex--;
       }
     },
+    setSlide(index) {
+      this.currentIndex = index;
+    },
+
     onTouchStart(event) {
       this.startX = event.touches[0].clientX;
     },
