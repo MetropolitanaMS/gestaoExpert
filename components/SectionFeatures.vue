@@ -21,11 +21,11 @@
         @click="setSlide(index)"
         :key="index"
         :label="slide.label"
-        color="#272354"
-        hoverColor="#555392"
+        color="#1e2a38"
+        hoverColor="#2c3150"
         :isSelected="index === currentIndex"
-        :selectedColor="'#555392'"
-        class="rotate-90 w-[12vw] h-[13.8vw] min-[2000px]:w-[11vw] min-[2000px]:h-[12.8vw] min-[4000px]:w-[10vw] min-[4000px]:h-[11.8vw] absolute"
+        :selectedColor="'#2c3150'"
+        class="rotate-90 w-[10vw] h-[11.8vw] min-[2000px]:w-[9vw] min-[2000px]:h-[10.8vw] min-[4000px]:w-[8vw] min-[4000px]:h-[9.8vw] absolute"
         :class="
           index === currentIndex ? 'focus:ring focus:ring-violet-300' : ''
         "
@@ -40,7 +40,7 @@
       />
     </div>
     <div
-      class="overflow-hidden relative w-full mt-[24%] lg:mt-[22%]"
+      class="overflow-hidden relative w-full mt-[20%] lg:mt-[18%]"
       @touchstart="onTouchStart"
       @touchmove="onTouchMove"
       @touchend="onTouchEnd"
@@ -180,89 +180,103 @@ export default {
       ],
       currentIndex: 0,
       positionsWithTwo: [
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
       ],
       positionsWithThree: [
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
-        { left: "39.5vw", top: "0vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
       ],
       positionsWithFour: [
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
-        { left: "39.5vw", top: "0vw" },
-        { left: "44.7vw", top: "9.1vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
       ],
       positionsWithFive: [
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
-        { left: "39.5vw", top: "0vw" },
-        { left: "44.7vw", top: "9.1vw" },
-        { left: "50vw", top: "0vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
       ],
       positionsWithSix: [
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
-        { left: "39.5vw", top: "0vw" },
-        { left: "44.7vw", top: "9.1vw" },
-        { left: "50vw", top: "0vw" },
-        { left: "55.2vw", top: "9.1vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
       ],
       positionsWithSeven: [
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
-        { left: "39.5vw", top: "0vw" },
-        { left: "44.7vw", top: "9.1vw" },
-        { left: "50vw", top: "0vw" },
-        { left: "55.2vw", top: "9.1vw" },
-        { left: "60.5vw", top: "0vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
       ],
       positionsWithEight: [
-        { left: "18.5vw", top: "0vw" },
-        { left: "23.7vw", top: "9.1vw" },
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
-        { left: "39.5vw", top: "0vw" },
-        { left: "44.7vw", top: "9.1vw" },
-        { left: "50vw", top: "0vw" },
-        { left: "55.2vw", top: "9.1vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
       ],
       positionsWithNine: [
-        { left: "18.5vw", top: "0vw" },
-        { left: "23.7vw", top: "9.1vw" },
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
-        { left: "39.5vw", top: "0vw" },
-        { left: "44.7vw", top: "9.1vw" },
-        { left: "50vw", top: "0vw" },
-        { left: "55.2vw", top: "9.1vw" },
-        { left: "60.5vw", top: "0vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
+        { left: "63.5vw", top: "0vw" },
       ],
       positionsWithTen: [
-        { left: "18.5vw", top: "0vw" },
-        { left: "23.7vw", top: "9.1vw" },
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
-        { left: "39.5vw", top: "0vw" },
-        { left: "44.7vw", top: "9.1vw" },
-        { left: "50vw", top: "0vw" },
-        { left: "55.2vw", top: "9.1vw" },
-        { left: "60.5vw", top: "0vw" },
-        { left: "65.7vw", top: "9.1vw" },
+        { left: "19.5vw", top: "0vw" },
+        { left: "23.9vw", top: "7.6vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
       ],
       positionsWithEleven: [
-        { left: "18.5vw", top: "0vw" },
-        { left: "23.7vw", top: "9.1vw" },
-        { left: "29vw", top: "0vw" },
-        { left: "34.2vw", top: "9.1vw" },
-        { left: "39.5vw", top: "0vw" },
-        { left: "44.7vw", top: "9.1vw" },
-        { left: "50vw", top: "0vw" },
-        { left: "55.2vw", top: "9.1vw" },
-        { left: "60.5vw", top: "0vw" },
-        { left: "65.7vw", top: "9.1vw" },
-        { left: "71vw", top: "0vw" },
+        { left: "19.5vw", top: "0vw" },
+        { left: "23.9vw", top: "7.6vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
+        { left: "63.5vw", top: "0vw" },
+      ],
+      positionsWithTwelve: [
+        { left: "19.5vw", top: "0vw" },
+        { left: "23.9vw", top: "7.6vw" },
+        { left: "28.3vw", top: "0vw" },
+        { left: "32.7vw", top: "7.6vw" },
+        { left: "37.1vw", top: "0vw" },
+        { left: "41.5vw", top: "7.6vw" },
+        { left: "45.9vw", top: "0vw" },
+        { left: "50.3vw", top: "7.6vw" },
+        { left: "54.7vw", top: "0vw" },
+        { left: "59.1vw", top: "7.6vw" },
+        { left: "63.5vw", top: "0vw" },
+        { left: "67.8vw", top: "7.6vw" },
       ],
       // firstLine: [
       //   { left: "20vw", top: "0vw" },
