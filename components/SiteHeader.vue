@@ -43,14 +43,46 @@ const navItems = [
             <li
               v-for="(item, index) in navItems"
               :key="index"
-              class="text-black-text"
+              class="relative group text-black-text"
             >
               <div
                 class="hover:text-primary w-fit transition duration-200 ease-in-out"
               >
-                <NuxtLink :to="item.href" class="font-bold py-2">{{
-                  item.text
-                }}</NuxtLink>
+                <NuxtLink
+                  :to="item.href"
+                  class="font-bold py-2 flex items-center gap-1"
+                >
+                  {{ item.text }}
+                  <Icon
+                    v-if="item.text === 'ADERÊNCIA'"
+                    name="mdi:chevron-down"
+                    class="text-base"
+                  />
+                </NuxtLink>
+              </div>
+
+              <div
+                v-if="item.text === 'ADERÊNCIA'"
+                class="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+              >
+                <ul class="flex flex-col p-2">
+                  <li>
+                    <NuxtLink
+                      to="#hero"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                    >
+                      Gestão Expert
+                    </NuxtLink>
+                  </li>
+                  <li>
+                    <NuxtLink
+                      to="/"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
+                    >
+                      Outros Serviços
+                    </NuxtLink>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -88,6 +120,7 @@ const navItems = [
           <li v-for="(item, index) in navItems" :key="index" link>
             <NuxtLink
               :to="item.href"
+              target="_blank"
               @click="isPanelVisible = false"
               class="font-medium text-gray-900 hover:text-lg py-2"
               >{{ item.text }}</NuxtLink
