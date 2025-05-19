@@ -140,8 +140,6 @@
 </template>
 
 <script>
-import { ArrowRight } from "lucide-vue-next";
-
 export default {
   name: "SectionFeatures",
   data() {
