@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <SiteHeader />
+  <NuxtLayout>
     <NuxtPage />
-    <SiteFooter />
-  </div>
+  </NuxtLayout>
 </template>
+
+<script setup>
+definePageMeta({
+  layout: "default",
+});
+</script>
 
 <style>
 .primary-color {

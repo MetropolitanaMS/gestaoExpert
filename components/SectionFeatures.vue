@@ -86,25 +86,27 @@
 
             <div class="flex-grow"></div>
 
-            <button
-              type="button"
-              class="mt-4 ml-auto rounded-full shadow-lg p-2 bg-gray-200 transition duration-200 hover:shadow-2xl hover:scale-120 cursor-pointer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6 text-black"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <NuxtLink to="/modules-page">
+              <button
+                type="button"
+                class="mt-4 ml-auto rounded-full shadow-lg p-2 bg-gray-200 transition duration-200 hover:shadow-2xl hover:scale-120 cursor-pointer"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-black"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </NuxtLink>
           </div>
 
           <div
